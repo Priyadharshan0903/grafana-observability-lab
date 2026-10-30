@@ -1,0 +1,10 @@
+apiVersion: 1
+
+# Every JSON file under grafana/dashboards/ is loaded; subfolders become Grafana folders.
+providers:
+  - name: learnings
+    type: file
+    allowUiUpdates: true # you can edit in the UI, but export back to JSON to keep changes
+    options:
+      path: /var/lib/grafana/dashboards
+      foldersFromFilesStructure: true
